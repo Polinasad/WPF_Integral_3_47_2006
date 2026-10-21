@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPF_Integral.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Integral"
+        mc:Ignorable="d"
+        Title="Садыкова" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" MinWidth="137.067"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Margin="0,0,0,28" Grid.RowSpan="2">Верхний предел</Label>
+        <TextBox Name="tbUpper" Grid.Row="0" Margin ="137,5,0,5" Grid.ColumnSpan="2">100000</TextBox>
+        <Label Grid.Row="1" Grid.Column="0" Margin="0,0,0,28" Grid.RowSpan="2">Нижний предел</Label>
+        <TextBox Name="tbLower" Grid.Row="1" Margin ="137,5,0,5" Grid.ColumnSpan="2">1</TextBox>
+        <Label Grid.Row="2" Grid.Column="0" Margin="0,0,0,26" Grid.RowSpan="2">Количество разбиений</Label>
+        <TextBox Name="tbCount" Grid.Row="2" Margin ="137,5,0,5" Grid.ColumnSpan="2">1000</TextBox>
+        <Label Grid.Row="2" Grid.Column="0" Margin="0,34,0,20" Grid.RowSpan="3">Метод</Label>
+        <ComboBox Name="cbMethod" Grid.Row="2" SelectedIndex="0" Grid.ColumnSpan="2" Margin="137,34,0,20" Grid.RowSpan="3">
+            <ComboBoxItem>Метод прямоугольников</ComboBoxItem>
+            <ComboBoxItem>Метод трапеции</ComboBoxItem>
+        </ComboBox>
+        <Button Name="btCalculate" Grid.Row="4" Click="btCalculate_Click" Grid.ColumnSpan="2" Margin="137,0,0,24" Grid.RowSpan="2">Посчитать</Button>
+        <Label Grid.Row="4" Grid.Column="0" Margin="0,22,0,0" Grid.RowSpan="2">Результат</Label>
+        <TextBlock Name="tbResult" Grid.Row="4" Grid.ColumnSpan="2" Margin="137,22,0,0" Grid.RowSpan="2"/>
+
+
+
+
+
+    </Grid>
+</Window>
